@@ -16,7 +16,6 @@ module = import_module(MODULENAME)
 funcdef = getattr(module, FUNCNAME)
 
 
-# Need to add div and modulo capability
 class AnonComparable(object):
     """Anonymous but unique comparable object."""
 
