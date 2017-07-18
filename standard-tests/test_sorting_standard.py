@@ -68,6 +68,12 @@ class AnonComparable(object):
         """Represent as value."""
         return str(self.value)
 
+    def __eq__(self, other):
+        """Equality."""
+        if self.__class__ != other.__class__:
+            return False
+        return self.value == other.value
+
 
 def _make_anon_list(size):
     """Return a list size items long of AnonComparable objects with dupes."""
