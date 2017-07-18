@@ -65,6 +65,10 @@ class AnonComparable(object):
         except AttributeError:
             return self.value / other
 
+    def __repr__(self):
+        """Represent as value."""
+        return str(self.value)
+
 
 def _make_anon_list(size):
     """Return a list size items long of AnonComparable objects with dupes."""
